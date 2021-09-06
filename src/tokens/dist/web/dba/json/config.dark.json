@@ -1,0 +1,55 @@
+{
+  "color": {
+    "brand": {
+      "primary": "#000000",
+      "secondary": "#000000",
+      "darkTest": "#000000"
+    },
+    "base": {
+      "black": "#000000",
+      "white": "#ffffff",
+      "gray": {
+        "light": "#cccccc",
+        "medium": "#999999",
+        "dark": "#111111"
+      },
+      "red": "#ff0000",
+      "green": "#00ff00"
+    },
+    "primary": "#000000",
+    "secondary": "#000000",
+    "action": {
+      "primary": "#000000",
+      "secondary": "#000000",
+      "tertiary": "#999999"
+    },
+    "font": {
+      "base": "#000000",
+      "primary": "#000000",
+      "secondary": "#000000",
+      "tertiary": "#cccccc"
+    }
+  },
+  "button": {
+    "border": {
+      "radius": "4px"
+    },
+    "text": {
+      "size": "1px"
+    },
+    "height": "40px"
+  },
+  "size": {
+    "font": {
+      "small": "0.75px",
+      "medium": "1px",
+      "large": "2px",
+      "base": "1px"
+    }
+  },
+  "font": {
+    "platform": {
+      "system": "Tahoma, Arial, 'Helvetica Neue', sans"
+    }
+  }
+}

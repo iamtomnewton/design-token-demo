@@ -1,0 +1,33 @@
+/**
+ * Do not edit directly
+ * Generated on Mon, 06 Sep 2021 13:16:44 GMT
+ */
+
+:root {
+  --font-platform-system: Tahoma, Arial, 'Helvetica Neue', sans;
+  --size-font-large: 2px; /* the large size of the font */
+  --size-font-medium: 1px; /* the medium size of the font */
+  --size-font-small: 0.75px; /* the small size of the font */
+  --button-height: 40px;
+  --button-border-radius: 4px;
+  --color-base-green: #00ff00;
+  --color-base-red: #ff0000;
+  --color-base-gray-dark: #111111;
+  --color-base-gray-medium: #999999;
+  --color-base-gray-light: #cccccc;
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+  --color-brand-secondary: #3269c8;
+  --color-brand-primary: #00098a;
+  --size-font-base: var(--size-font-medium); /* the base size of the font */
+  --button-text-size: var(--size-font-medium);
+  --color-font-tertiary: var(--color-base-gray-light);
+  --color-font-base: var(--color-base-black);
+  --color-action-tertiary: var(--color-base-gray-medium);
+  --color-secondary: var(--color-brand-secondary);
+  --color-primary: var(--color-brand-primary);
+  --color-font-secondary: var(--color-secondary);
+  --color-font-primary: var(--color-primary);
+  --color-action-secondary: var(--color-secondary);
+  --color-action-primary: var(--color-primary);
+}
