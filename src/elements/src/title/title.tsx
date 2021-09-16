@@ -1,6 +1,6 @@
-import React from 'react'
-import { TitleProps } from './title.types'
+import { TitleTypes } from "./title.types";
+import * as styled from "./title.styles";
 
-export const Title = ({ text }: TitleProps) => {
-    return <h1>{text}</h1>
-}
+export const Title = ({ text }: TitleTypes) => {
+  return <styled.Title>{text}</styled.Title>;
+};

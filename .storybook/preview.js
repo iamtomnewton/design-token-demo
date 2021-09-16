@@ -1,6 +1,11 @@
-import { ThemeProvider } from 'styled-components'
-import { bilbasenTheme, bilbasenDarkTheme, dbaTheme, dbaDarkTheme } from '../src/foundations/src/themeCatalogue'
-import { GlobalFonts } from '../src/foundations/src/typography/typography.settings';
+import { ThemeProvider } from "styled-components";
+import {
+  bilbasenTheme,
+  bilbasenDarkTheme,
+  dbaTheme,
+  dbaDarkTheme,
+} from "../src/foundations/src/themeCatalogue";
+import { GlobalFonts } from "../src/foundations/src/typography/typography.settings";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -12,37 +17,37 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Foundations', 'Elements', 'Patterns', 'Collections', '*'],
+      order: ["Foundations", "Elements", "Patterns", "Collections", "*"],
     },
   },
   backgrounds: {
     grid: {
       disable: true,
-    }
-  }
-}
+    },
+  },
+};
 
 export const globalTypes = {
   brand: {
-    name: 'Brand',
-    description: 'Brand',
-    defaultValue: 'Bilbasen',
+    name: "Brand",
+    description: "Brand",
+    defaultValue: "Bilbasen",
     toolbar: {
-      icon: 'globe',
+      icon: "globe",
       // Array of plain string values or MenuItem shape (see below)
-      items: ['Bilbasen', 'DBA'],
+      items: ["Bilbasen", "DBA"],
       // Property that specifies if the name of the item will be displayed
       showName: true,
     },
   },
   theme: {
-    name: 'Theme',
-    description: 'Global theme for components',
-    defaultValue: 'Light',
+    name: "Theme",
+    description: "Global theme for components",
+    defaultValue: "Light",
     toolbar: {
-      icon: 'paintbrush',
+      icon: "paintbrush",
       // Array of plain string values or MenuItem shape (see below)
-      items: ['Light', 'Dark'],
+      items: ["Light", "Dark"],
       // Property that specifies if the name of the item will be displayed
       showName: true,
     },
@@ -53,19 +58,20 @@ const globalThemes = {
   BilbasenTheme: bilbasenTheme,
   BilbasenDarkTheme: bilbasenDarkTheme,
   DBATheme: dbaTheme,
-  DBADarkTheme: dbaDarkTheme
-}
+  DBADarkTheme: dbaDarkTheme,
+};
 
 const withThemeProvider = (Story, context) => {
-
-  const theme = `${context.globals.brand}${context.globals.theme === 'Light' ? '' : context.globals.theme}Theme`
+  const theme = `${context.globals.brand}${
+    context.globals.theme === "Light" ? "" : context.globals.theme
+  }Theme`;
 
   return (
     <ThemeProvider theme={globalThemes[theme]}>
       <GlobalFonts />
       <Story {...context} />
     </ThemeProvider>
-  )
-}
+  );
+};
 
 export const decorators = [withThemeProvider];
