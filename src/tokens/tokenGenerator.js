@@ -18,17 +18,17 @@ function tokenConfig(theme, brand, platform) {
     // Include will deep merge the files only overriding the theme values
 
     "include": [
-      `config/brands/${brand}/${routeGenerator('default')}.json`,
+      `config/brands/${brand}/**/${routeGenerator('default')}.json`,
       `config/global/**/${routeGenerator('default')}.json`,
-      `config/platforms/${platform}/${routeGenerator('default')}.json`
+      `config/platforms/**/${platform}/${routeGenerator('default')}.json`
     ],
 
     // The source order is specific and controls the deep merge overrides. Brands > Global > Platforms.
 
     "source": [
-      `config/brands/${brand}/${routeGenerator(theme)}.json`,
+      `config/brands/**/${brand}/${routeGenerator(theme)}.json`,
       `config/global/**/${routeGenerator(theme)}.json`,
-      `config/platforms/${platform}/${routeGenerator(theme)}.json`
+      `config/platforms/**/${platform}/${routeGenerator(theme)}.json`
     ],
 
     "platforms": {

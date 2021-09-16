@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 import { bilbasenTheme, bilbasenDarkTheme, dbaTheme, dbaDarkTheme } from '../src/foundations/src/themeCatalogue'
+import { GlobalFonts } from '../src/foundations/src/typography/typography.settings';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -61,6 +62,7 @@ const withThemeProvider = (Story, context) => {
 
   return (
     <ThemeProvider theme={globalThemes[theme]}>
+      <GlobalFonts />
       <Story {...context} />
     </ThemeProvider>
   )
