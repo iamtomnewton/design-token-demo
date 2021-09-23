@@ -65,6 +65,10 @@ function tokenConfig(theme, brand, platform) {
             destination: `config.colors${extensionGenerator(theme)}.xml`,
             format: "android/colors",
           },
+          {
+            destination: `config${extensionGenerator(theme)}.xml`,
+            format: "android/resources",
+          },
         ],
         options: {
           outputReferences: true,
@@ -80,6 +84,10 @@ function tokenConfig(theme, brand, platform) {
           {
             destination: `config${extensionGenerator(theme)}.h`,
             format: "ios/macros",
+          },
+          {
+            destination: `config${extensionGenerator(theme)}.swift`,
+            format: "ios-swift/class.swift",
           },
         ],
         options: {
