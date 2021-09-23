@@ -8,7 +8,7 @@
   "private": false,
   "scripts": {
     "start": "yarn tokens && start-storybook -p 6006 -s public",
-    "build": "yarn tokens && build-storybook -s public",
+    "build": "yarn tokens && build-storybook -o ./build",
     "tokens": "cd src/tokens && node ./tokenGenerator.js && quicktype dist/web/**/**/*.json -o dist/styles.d.ts --just-types --top-level DefaultTheme"
   },
   "eslintConfig": {
