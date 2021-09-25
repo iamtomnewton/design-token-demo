@@ -49,7 +49,7 @@ export const fluidType = (
 
 export const typography = (
   theme: DefaultTheme,
-  dec: "default" | "small" = "default"
+  dec: "default" | "small" | "title" = "default"
 ) => {
   const minFontSize = ThemeSelectors.getMinFontSize(theme, dec);
   const maxFontSize = ThemeSelectors.getMaxFontSize(theme, dec);
