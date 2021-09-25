@@ -14,7 +14,6 @@ export const Button = styled.button<ButtonTypes>`
   color: ${({ theme }) => ThemeSelectors.getWhite(theme)};
   cursor: pointer;
   display: inline-block;
-  font-family: ${({ theme }) => ThemeSelectors.getFontRegular(theme)};
   outline: none;
   padding: ${({ theme }) => ThemeSelectors.getGroupTwoSpacing(theme)}
     ${({ theme }) => ThemeSelectors.getGroupFourSpacing(theme)};

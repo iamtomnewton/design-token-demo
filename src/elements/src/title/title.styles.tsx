@@ -4,6 +4,5 @@ import { ThemeSelectors } from "../../../foundations/src/selectors/theme-selecto
 
 export const Title = styled.h1<TitleTypes>`
   color: ${({ theme }) => ThemeSelectors.getPrimary(theme)};
-  font-family: ${({ theme }) => ThemeSelectors.getFontRegular(theme)};
   font-size: 32px;
 `;

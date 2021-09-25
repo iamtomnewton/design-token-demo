@@ -11,15 +11,19 @@ export const GlobalFonts = createGlobalStyle`
   @font-face {
       font-family: ${({ theme }) => ThemeSelectors.getFontRegular(theme)};
       src: url(${({ theme }) =>
-        ThemeSelectors.getFontSrc(theme)} + '.svg') format('svg'),
+    ThemeSelectors.getFontSrc(theme)} + '.svg') format('svg'),
           url(${({ theme }) =>
-            ThemeSelectors.getFontSrc(theme)} + '.ttf') format('truetype'),
+    ThemeSelectors.getFontSrc(theme)} + '.ttf') format('truetype'),
           url(${({ theme }) =>
-            ThemeSelectors.getFontSrc(theme)} + '.woff') format('woff');
+    ThemeSelectors.getFontSrc(theme)} + '.woff') format('woff');
       font-weight: normal;
       font-style: normal;
     }
+    * {
+      font-family: ${({ theme }) => ThemeSelectors.getFontRegular(theme)}, ${({ theme }) => ThemeSelectors.getDefaultStack(theme)} ;
+    }
 `;
+
 
 /// RESPONSIVE TYPE
 
@@ -33,11 +37,9 @@ export const fluidType = (
 
   return `
     @media screen and (min-width: ${calculateRem(parseInt(minScreenSize))}) {
-      font-size: calc(${minFontSize} + (${
-    parseInt(maxFontSize) - parseInt(minFontSize)
-  }) * (100vw - ${minScreenSize})/(${
-    parseInt(maxScreenSize) - parseInt(minScreenSize)
-  }));
+      font-size: calc(${minFontSize} + (${parseInt(maxFontSize) - parseInt(minFontSize)
+    }) * (100vw - ${minScreenSize})/(${parseInt(maxScreenSize) - parseInt(minScreenSize)
+    }));
     }
     @media screen and (min-width: ${calculateRem(parseInt(maxScreenSize))}) {
       font-size: ${calculateRem(parseInt(maxFontSize))};
